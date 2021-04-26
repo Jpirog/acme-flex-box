@@ -15,12 +15,12 @@ nav > ul {
   padding: .7rem;
 }
 
-ul > li:first-child{
+#topnav > li:first-child{
   flex-basis: 25%;
   font-size: 25px;
 }
 
-ul > li {
+#topnav > li {
   font-size: 12px;
   flex: 1;
 }
@@ -28,14 +28,60 @@ ul > li {
 .menuitem:hover{
   font-weight: bold;
 }
-/*
-nav > ul > li:hover {
-  font-weight: bold;
-}*/
 
+h1{
+  font-size: 25px;
+  padding-left: .55rem;
+}
+
+#create{
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#userfields {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#userfields > li {
+  padding: 5px;
+}
+
+.label {
+  color: green;
+  text-align: left;
+}
+#userfields > li > input,
+#userfields > li > select
+ {
+  width: 300px;
+}
+
+#bios {
+   display: flex;
+   flex-wrap: wrap;
+}
+#bios >div {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 15px;
+  flex: 1 1 0px;
+  margin: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-basis: calc(100%/3 - 30px);
+}
 
 @media (max-width:400px) {
   nav > ul {
     flex-direction: column;
   }
+  #create{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
 }
