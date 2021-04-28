@@ -76,14 +76,6 @@ h1{
   border-radius: 5px;
 }
 
-#userfields > li:last-child {
-/*  color: blue; */
-}
-
-#btnparent{
-  /*justify-content: space-between;*/
-}
-
 button{
 margin: 0 auto 0 auto;
 }
