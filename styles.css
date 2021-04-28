@@ -150,7 +150,7 @@ margin: 0 auto 0 auto;
   button:first-child{
     border: none;
     background-color: white;
-
+    margin-left: 0;
   }
   #userfields > li:last-child {
     flex-direction: column;
