@@ -16,37 +16,30 @@ nav > ul > li{
   color: white;
   padding: .7rem;
 }
-
 #topnav > li:first-child{
   flex-basis: 25%;
   font-size: 25px;
 }
-
 #topnav > li {
   font-size: 12px;
   flex: 1;
 }
 #topnav{
   padding-inline-start: 0;
-
 }
 .selected, .menuitem:hover{
   font-weight: bold;
 }
-
 h1{
   font-size: 25px;
   padding-left: .55rem;
 }
-
 #create{
   border: 1px solid black;
   border-radius: 8px;
-
   width: 50%;
   margin: 0 auto;
 }
-
 #userfields {
   list-style: none;
   margin-left: 10px;;
@@ -59,7 +52,6 @@ h1{
   align-items: center;
   margin-right: 10px;;
 }
-
 .label {
   width: 8rem;
   flex: 1;
@@ -75,7 +67,6 @@ h1{
 #dept {
   border-radius: 5px;
 }
-
 button{
 margin: 0 auto 0 auto;
 }
@@ -87,7 +78,6 @@ margin: 0 auto 0 auto;
   color: white;
   margin-left: 0;
 }
-
 #bios {
    display: flex;
    flex-wrap: wrap;
