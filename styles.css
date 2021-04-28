@@ -5,13 +5,19 @@
 nav {
   background-color: #1a8cff;
 }
-nav > ul {
+nav > ul{
   display: flex;
   flex-direction: row;
-  list-style: none;
-  color:cornsilk;
   justify-content: space-between;
   align-items: center;
+}
+nav > ul > li{
+/*  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;*/
+  list-style: none;
+  color: white;
   padding: .7rem;
 }
 
@@ -23,9 +29,14 @@ nav > ul {
 #topnav > li {
   font-size: 12px;
   flex: 1;
+  /*padding: 0;
+  margin: 0;*/
 }
+#topnav{
+  padding-inline-start: 0;
 
-.menuitem:hover{
+}
+.selected, .menuitem:hover{
   font-weight: bold;
 }
 
@@ -36,33 +47,97 @@ h1{
 
 #create{
   border: 1px solid black;
+  border-radius: 8px;
+
   width: 50%;
   margin: 0 auto;
 }
 
 #userfields {
   list-style: none;
-  display: flex;
+/*  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;*/
+  margin-left: 10px;;
+  padding-inline-start: 0;;
 }
 #userfields > li {
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex; /* added this and below*/
+  align-items: center;
+  margin-right: 10px;;
+  /*padding-left: 0;
+  margin-left: 0;*/
 }
 
 .label {
-  color: green;
-  text-align: left;
+/*  flex-grow: 1; */
+  width: 8rem;
+  flex: 1;
+  font-weight: bold;
+  /*padding-left: 0;
+  margin-left: 0;*/
 }
 #userfields > li > input,
 #userfields > li > select
  {
   width: 300px;
+  flex: 2; /* added plus above */
+  border: 1px solid lightgray;
+  /* flex: 1 1 auto; */
+/*  flex-grow: 3;*/
+}
+#dept {
+  border-radius: 5px;
+}
+#userfields > li:last-child {
+  /* align-self: flex-end; */
+  /*flex-direction: row;*/
+  /*align-items: center;*/
+/*align-content: center;*/
+/*  color: blue;
+  /*align-self: center;*/
+  /*margin-right: auto;*/
+  /****background-color: blue;****/
+/*  display: flex;*/
+/*margin: 0 auto;*/
+}
+
+#btnparent{
+  /*justify-content: space-between;*/
+}
+
+button{
+  /*align-self: center;*/
+/*margin: 0 auto;*/
+/*margin-left:0 auto;*/
+/*margin: 0 auto 0 auto;*/ /*** Margin is needed ***/
+margin: 0 auto 0 auto;
+/*  margin: auto;*/
+  /*width: 40%;*/
+  /*margin 0 10px 0 -20px;*/
+/*float: left;*/
+/*padding-right: 25px;*/
+/*align-self: center;*/
+/*text-align: center;*/
+}
+#clear{
+  margin-right: 0;
+}
+#save {
+  background-color: #1a8cff;
+  color: white;
+  margin-left: 0;
+  /*margin: auto;
+  float: right;*/
+  
 }
 
 #bios {
    display: flex;
    flex-wrap: wrap;
+   margin-top: 5px;
 }
 #bios >div {
   border: 1px solid black;
@@ -73,15 +148,80 @@ h1{
   padding-left: 15px;
   padding-right: 15px;
   flex-basis: calc(100%/3 - 30px);
+  max-width: calc(100%/3 - 30px);
 }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
   nav > ul {
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    /*padding: 10px;*/
+  }
+  nav > ul > li {
+    padding: 10px;
+    /*font-size: 40px;*/
   }
   #create{
     width: 90%;
     margin: 0 auto;
   }
-  
+ #bios{
+   flex-wrap: wrap;
+   margin-top: 15px;
+ }  
+ #bios > div{
+  max-width: 300px;
+  flex-basis: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+  /*margin-right: 0 auto;*/
+  }  
+  #userfields li{
+    flex-direction: column;
+    flex-wrap: wrap;
+/*    justify-content: flex-start;*/
+    align-items: flex-start;
+    /*padding-top: 5px;*/
+  }
+.label{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#userfields > li > input,
+#userfields > li > select{
+  /*margin-left: 5px;*/
+  /*align-self: stretch;*/
+  border: none;
+  padding-top: 5px;
+  /*padding-bottom: 5px;*/
+}
+  button {
+    /*width: 80%;*/
+    max-width: 300px;
+    height: 28px;
+  }
+  button:first-child{
+    border: none;
+    background-color: white;
+
+  }
+  #userfields > li:last-child {
+    /*align-items: flex-end;*/
+    /*align-self: flex-start;*/
+    flex-direction: column;
+    /*justify-content: flex-start;*/
+    /*text-align: left;*/
+  }
+
+  #userfields > li:last-child button{
+    width: 100%;
+  }
+   select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Safari, Chrome, Opera */
+    -webkit-appearance: none;
+  }
 }
